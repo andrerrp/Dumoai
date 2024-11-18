@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Kalkulator</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domuai : Kalkulator Biaya Perkara</title>
+</head>
+<body>
+    <div class="header">
+        <img src="logo.png">
+        <div class="title-container">
+            <div>Domuai : Kalkulator Biaya Perkara</div>
+            <div class="subtitle">Pengadilan Negeri Kolaka</div>
+        </div>
+    </div>
+    <div class="calculator">
+        <div class="input-group">
+            <label for="caseType">Jenis Perkara</label>
+            <select id="caseType" onchange="handleCaseTypeChange()">
+                <option value="" selected disabled>Pilih Jenis Perkara</option>
+                <option value="1000">Gugatan</option>
+                <option value="800">Gugatan Sederhana</option>
+                <option value="600">Permohonan</option>
+            </select>
+        </div>
+		<datalist id="kecamatanList">
+			<option value="Tidak Diketahui">
+			<option value="Abeli">
+			<option value="Baruga">
+			<option value="Kadia">
+			<option value="Kambu">
+			<option value="Kendari">
+			<option value="Kendari Barat">
+			<option value="Mandonga">
+			<option value="Nambo">
+			<option value="Poasia">
+			<option value="Puuwatu">
+			<option value="Wua-Wua">
+			<option value="Betoambari">
+			<option value="Bungi">
+			<option value="Kokalukuna">
+			<option value="Lea-Lea">
+			<option value="Murhum">
+			<option value="Sorawolio">
+			<option value="Wolio">
+			<option value="Kabaena">
+			<option value="Kabaena Barat">
+			<option value="Kabaena Selatan">
+			<option value="Kabaena Tengah">
+			<option value="Kabaena Timur">
+			<option value="Kabaena Utara">
+			<option value="Lantari Jaya">
+			<option value="Mata Oleo">
+			<option value="Mata Usu">
+			<option value="Poleang">
+			<option value="Poleang Barat">
+			<option value="Poleang Selatan">
+			<option value="Poleang Tengah">
+			<option value="Poleang Tenggara">
+			<option value="Poleang Timur">
+			<option value="Poleang Utara">
+			<option value="Rarowatu">
+			<option value="Rarowatu Utara">
+			<option value="Rumbia">
+			<option value="Rumbia Tengah">
+			<option value="Tontonunu">
+			<option value="Towewe">
+			<option value="Kapontori">
+			<option value="Lasalimu">
+			<option value="Lasalimu Selatan">
+			<option value="Pasar Wajo">
+			<option value="Siontapina">
+			<option value="Wabula">
+			<option value="Wolowa">
+			<option value="Batauga">
+			<option value="Batu Atas">
+			<option value="Kadatua">
+			<option value="Lapandewa">
+			<option value="Sampolawa">
+			<option value="Siompu">
+			<option value="Siompu Barat">
+			<option value="Gu">
+			<option value="Lakudo">
+			<option value="Mawasangka">
+			<option value="Mawasangka Tengah">
+			<option value="Mawasangka Timur">
+			<option value="Sangia Wambulu">
+			<option value="Talaga Raya">
+			<option value="Bonegunu">
+			<option value="Kambowa">
+			<option value="Kulisusu">
+			<option value="Kulisusu Barat">
+			<option value="Kulisusu Utara">
+			<option value="Wakorumba Utara">
+			<option value="Baula">
+			<option value="Iwoimendaa">
+			<option value="Kolaka">
+			<option value="Latambaga">
+			<option value="Pomalaa">
+			<option value="Samaturu">
+			<option value="Tanggetada">
+			<option value="Toari">
+			<option value="Watubangga">
+			<option value="Wolo">
+			<option value="Wundulako">
+			<option value="Aere">
+			<option value="Dangia">
+			<option value="Ladongi">
+			<option value="Lambandia">
+			<option value="Loea">
+			<option value="Mowewe">
+			<option value="Poli-Polia">
+			<option value="Tinondo">
+			<option value="Tirawuta">
+			<option value="Uluiwoi">
+			<option value="Ueesi">
+			<option value="Batu Putih">
+			<option value="Katoi">
+			<option value="Kodeoha">
+			<option value="Lambai">
+			<option value="Lasusua">
+			<option value="Ngapa">
+			<option value="Pakue">
+			<option value="Pakue Tengah">
+			<option value="Pakue Utara">
+			<option value="Porehu">
+			<option value="Rante Angin">
+			<option value="Tolala">
+			<option value="Watunohu">
+			<option value="Wawo">
+			<option value="Abuki">
+			<option value="Amonggedo">
+			<option value="Anggaberi">
+			<option value="Asinua">
+			<option value="Besulutu">
+			<option value="Bondoala">
+			<option value="Kapoiala">
+			<option value="Konda">
+			<option value="Lambuya">
+			<option value="Latoma">
+			<option value="Meluhu">
+			<option value="Onembute">
+			<option value="Pondidaha">
+			<option value="Puriala">
+			<option value="Routa">
+			<option value="Sampara">
+			<option value="Soropia">
+			<option value="Tongauna">
+			<option value="Tongauna Utara">
+			<option value="Uepai">
+			<option value="Unaaha">
+			<option value="Wawotobi">
+			<option value="Wonggeduku">
+			<option value="Wonggeduku Barat">
+			<option value="Wawonii Barat">
+			<option value="Wawonii Selatan">
+			<option value="Wawonii Tengah">
+			<option value="Wawonii Tenggara">
+			<option value="Wawonii Timur">
+			<option value="Wawonii Timur Laut">
+			<option value="Wawonii Utara">
+			<option value="Andoolo">
+			<option value="Andoolo Barat">
+			<option value="Angata">
+			<option value="Baito">
+			<option value="Basala">
+			<option value="Benua">
+			<option value="Buke">
+			<option value="Kolono">
+			<option value="Kolono Timur">
+			<option value="Konda">
+			<option value="Laeya">
+			<option value="Lainea">
+			<option value="Lalembuu">
+			<option value="Landono">
+			<option value="Laonti">
+			<option value="Moramo">
+			<option value="Moramo Utara">
+			<option value="Mowila">
+			<option value="Palangga">
+			<option value="Palangga Selatan">
+			<option value="Ranomeeto">
+			<option value="Ranomeeto Barat">
+			<option value="Tinanggea">
+			<option value="Wolasi">
+			<option value="Asera">
+			<option value="Andowia">
+			<option value="Langgikima">
+			<option value="Lasolo">
+			<option value="Lasolo Kepulauan">
+			<option value="Lembo">
+			<option value="Molawe">
+			<option value="Motui">
+			<option value="Oheo">
+			<option value="Sawa">
+			<option value="Wiwirano">
+			<option value="Batukara">
+			<option value="Bone">
+			<option value="Duruka">
+			<option value="Kabangka">
+			<option value="Kabawo">
+			<option value="Katobu">
+			<option value="Kontukowuna">
+			<option value="Kontunaga">
+			<option value="Lawa">
+			<option value="Lohia">
+			<option value="Maligano">
+			<option value="Marobo">
+			<option value="Napabalano">
+			<option value="Parigi">
+			<option value="Pasir Putih">
+			<option value="Sawerigadi">
+			<option value="Tongkuno">
+			<option value="Tongkuno Selatan">
+			<option value="Towea">
+			<option value="Wakorumba Selatan">
+			<option value="Watopute">
+			<option value="Barangka">
+			<option value="Kusambi">
+			<option value="Lawa">
+			<option value="Maginti">
+			<option value="Napano Kusambi">
+			<option value="Sawerigadi">
+			<option value="Tiworo Kepulauan">
+			<option value="Tiworo Selatan">
+			<option value="Tiworo Tengah">
+			<option value="Tiworo Utara">
+			<option value="Wadaga">
+			<option value="Binongko">
+			<option value="Kaledupa">
+			<option value="Kaledupa Selatan">
+			<option value="Tomia">
+			<option value="Tomia Timur">
+			<option value="Wangi-Wangi">
+			<option value="Wangi-Wangi Selatan">
+		</datalist>
+
+        <div class="section-separator" id="separatorAfterJenisPerkara"></div>
+        <div class="input-group" id="penggugatSection" style="display: none;">
+            <label for="penggugat">Jumlah Penggugat</label>
+            <div class="number-controls">
+                <button type="button" onclick="decreasePenggugat()">-</button>
+                <input type="number" id="penggugat" value="1" min="0">
+                <button type="button" onclick="increasePenggugat()">+</button>
+            </div>
+			<div class="info-note">
+				Catatan: Jika menggunakan Kuasa Hukum, maka Jumlah Penggugat adalah Jumlah Kuasa Hukum
+			</div>
+        </div>
+        <div class="input-group" id="pemohonSection" style="display: none;">
+            <label for="pemohon">Jumlah Pemohon</label>
+            <div class="number-controls">
+                <button type="button" onclick="decreasePemohon()">-</button>
+                <input type="number" id="pemohon" value="1" min="1">
+                <button type="button" onclick="increasePemohon()">+</button>
+            </div>
+        </div>
+        <div class="section-separator" id="separatorAfterPenggugat"></div>
+        <div id="additionalFields"></div>
+        <button onclick="calculateCost()">Hitung Biaya</button>
+        <div class="result-container" id="result"></div>
+    <div id="notificationModal" class="modal">
+        <div class="modal-content">
+            <p>Kalkulator ini Berusaha Menghitung Biaya Perkara Secara Aktual, Akan Ada Perbedaan Saat Melakukan Pendaftaran</p>
+            <button class="modal-button" onclick="acknowledgeNotification()">Saya Mengerti</button>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

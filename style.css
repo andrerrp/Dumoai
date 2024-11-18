@@ -1,0 +1,251 @@
+/* General Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Body Styles */
+        body {
+            font-family: Helvetica, sans-serif;
+            background-color: #012b2a;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding-top: 80px;
+            margin: 0;
+            color: #fff;
+        }
+
+        /* Header Styles */
+        .header {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #0a8e83;
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            z-index: 1000;
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+
+        .header img {
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        /* Title and Subtitle Container */
+        .title-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .title-container div:first-child {
+            font-size: 2em;
+        }
+        .subtitle {
+            font-size: 1.2em;
+            font-weight: normal;
+            color: #ffefbd;
+            margin-top: 3px;
+        }
+
+        /* Calculator Container */
+        .calculator {
+            background-color: #0a8e83;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 350px;
+            width: 100%;
+            margin-top: 80px;
+            text-align: center;
+            color: #fff;
+        }
+
+        /* Input Group */
+        .input-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #fff;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        /* Section Separator */
+        .section-separator {
+            height: 2px;
+            background-color: #ffefbd;
+            margin: 15px 0;
+            display: none;
+        }
+
+        /* Tergugat Controls */
+        .tergugat-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .tergugat-controls select {
+            flex: 1;
+        }
+        .tergugat-controls button {
+            width: 30px;
+            height: 30px;
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        /* Number Controls */
+		.number-controls {
+			display: flex;
+			align-items: center;
+			justify-content: center;  /* Add this line */
+			gap: 10px;
+			margin-top: 15px;
+        }
+        .number-controls input[type="number"] {
+            width: 50px;
+            text-align: center;
+        }
+        /* Updated styling for number control buttons */
+        .number-controls button {
+            width: 30px;
+            height: 30px;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        /* Specific styling for decrease buttons */
+        .number-controls button:first-child {
+            background-color: #e74c3c;
+        }
+        /* Specific styling for increase buttons */
+        .number-controls button:last-child {
+            background-color: #4CAF50;
+        }
+        /* Add Tergugat Button */
+        .add-tergugat-btn {
+            margin-top: 10px;
+            padding: 8px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        /* Button */
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        /* Result Display */
+        .result-container {
+            margin-top: 15px;
+            text-align: left;
+            background-color: #1e3d3b;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .result-container p {
+            margin: 5px 0;
+        }
+		/* Info Note Style */
+		.info-note {
+			font-size: 0.85em;
+			color: #ffefbd;
+			margin-top: 5px;
+			font-style: italic;
+			line-height: 1.3;
+			padding: 8px;
+			background-color: rgba(0, 0, 0, 0.2);
+			border-radius: 4px;
+			border-left: 3px solid #ffefbd;
+		}
+				.modal {
+			display: none;
+			position: fixed;
+			z-index: 1001;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.5);
+		}
+
+		.modal-content {
+			background-color: #0a8e83;
+			margin: 15% auto;
+			padding: 20px;
+			border: 1px solid #888;
+			border-radius: 8px;
+			width: 80%;
+			max-width: 500px;
+			text-align: center;
+		}
+
+		.modal-button {
+			margin-top: 15px;
+			padding: 10px 20px;
+			background-color: #4CAF50;
+			color: white;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+		table {
+			width: 100%; /* Pastikan tabel menggunakan lebar penuh container */
+			border-collapse: collapse; /* Hilangkan jarak antar sel tabel */
+		}
+
+		table th, table td {
+			padding: 8px; /* Ruang antar teks */
+			text-align: left; /* Rata kiri untuk teks */
+			border-bottom: 1px solid #ddd; /* Garis bawah untuk pemisah */
+		}
+
+		table th {
+			background-color: #0a8e83; /* Warna latar belakang untuk header */
+			color: white; /* Warna teks header */
+		}
+
+		@media screen and (max-width: 600px) {
+			table th, table td {
+				font-size: 14px; /* Ukuran font lebih kecil untuk layar kecil */
+				padding: 5px; /* Ruang antar teks lebih kecil */
+			}
+		}
+
+		div[style*="overflow-x: auto;"] {
+			margin-bottom: 15px; /* Tambahkan jarak bawah agar tabel tidak terlalu menempel dengan elemen lainnya */
+		}
